@@ -1,4 +1,3 @@
-C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.Form1.resources
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.Properties.Resources.resources
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.csproj.GenerateResource.cache
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.GeneratedMSBuildEditorConfig.editorconfig
@@ -15,3 +14,17 @@ C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFin
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.pdb
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\ref\View.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.FrmHome.resources
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.FrmLogin.resources
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\bin\Debug\net6.0-windows\Entidades.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\bin\Debug\net6.0-windows\Entidades.pdb
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.csproj.CopyComplete
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.FrmHome_Socio.resources
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.FrmSocio_Alquileres.resources

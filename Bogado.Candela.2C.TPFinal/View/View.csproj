@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="FrmSocio_Alquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHome_Socio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
