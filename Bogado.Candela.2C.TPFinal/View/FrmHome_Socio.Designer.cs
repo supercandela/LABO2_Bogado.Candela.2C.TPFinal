@@ -65,6 +65,7 @@
             pcbPoster8 = new PictureBox();
             lblAlquilar = new Label();
             lblHistorial = new Label();
+            lblCerrarSesion = new Label();
             pnlFondo1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbPoster1).BeginInit();
             pnlFondo2.SuspendLayout();
@@ -102,7 +103,7 @@
             lblTopPeliculas.BackColor = Color.Transparent;
             lblTopPeliculas.Font = new Font("Consolas", 20F, FontStyle.Bold, GraphicsUnit.Point);
             lblTopPeliculas.ForeColor = Color.Magenta;
-            lblTopPeliculas.Location = new Point(1072, 31);
+            lblTopPeliculas.Location = new Point(527, 68);
             lblTopPeliculas.Margin = new Padding(4, 0, 4, 0);
             lblTopPeliculas.Name = "lblTopPeliculas";
             lblTopPeliculas.Size = new Size(306, 47);
@@ -115,9 +116,9 @@
             pnlFondo1.Controls.Add(lblAnio1);
             pnlFondo1.Controls.Add(lblTitulo1);
             pnlFondo1.Controls.Add(pcbPoster1);
-            pnlFondo1.Location = new Point(40, 134);
+            pnlFondo1.Location = new Point(40, 156);
             pnlFondo1.Name = "pnlFondo1";
-            pnlFondo1.Size = new Size(250, 350);
+            pnlFondo1.Size = new Size(250, 351);
             pnlFondo1.TabIndex = 5;
             // 
             // lblAnio1
@@ -134,6 +135,7 @@
             // 
             // lblTitulo1
             // 
+            lblTitulo1.AutoEllipsis = true;
             lblTitulo1.AutoSize = true;
             lblTitulo1.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo1.ForeColor = Color.White;
@@ -159,9 +161,9 @@
             pnlFondo2.Controls.Add(lblAnio2);
             pnlFondo2.Controls.Add(lblTitulo2);
             pnlFondo2.Controls.Add(pcbPoster2);
-            pnlFondo2.Location = new Point(397, 134);
+            pnlFondo2.Location = new Point(397, 156);
             pnlFondo2.Name = "pnlFondo2";
-            pnlFondo2.Size = new Size(250, 350);
+            pnlFondo2.Size = new Size(250, 351);
             pnlFondo2.TabIndex = 9;
             // 
             // lblAnio2
@@ -178,6 +180,7 @@
             // 
             // lblTitulo2
             // 
+            lblTitulo2.AutoEllipsis = true;
             lblTitulo2.AutoSize = true;
             lblTitulo2.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo2.ForeColor = Color.White;
@@ -203,9 +206,9 @@
             pnlFondo3.Controls.Add(lblAnio3);
             pnlFondo3.Controls.Add(lblTitulo3);
             pnlFondo3.Controls.Add(pcbPoster3);
-            pnlFondo3.Location = new Point(730, 134);
+            pnlFondo3.Location = new Point(730, 156);
             pnlFondo3.Name = "pnlFondo3";
-            pnlFondo3.Size = new Size(250, 350);
+            pnlFondo3.Size = new Size(250, 351);
             pnlFondo3.TabIndex = 11;
             // 
             // lblAnio3
@@ -222,6 +225,7 @@
             // 
             // lblTitulo3
             // 
+            lblTitulo3.AutoEllipsis = true;
             lblTitulo3.AutoSize = true;
             lblTitulo3.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo3.ForeColor = Color.White;
@@ -247,9 +251,9 @@
             pnlFondo4.Controls.Add(lblAnio4);
             pnlFondo4.Controls.Add(lblTitulo4);
             pnlFondo4.Controls.Add(pcbPoster4);
-            pnlFondo4.Location = new Point(1087, 134);
+            pnlFondo4.Location = new Point(1087, 156);
             pnlFondo4.Name = "pnlFondo4";
-            pnlFondo4.Size = new Size(250, 350);
+            pnlFondo4.Size = new Size(250, 351);
             pnlFondo4.TabIndex = 13;
             // 
             // lblAnio4
@@ -266,6 +270,7 @@
             // 
             // lblTitulo4
             // 
+            lblTitulo4.AutoEllipsis = true;
             lblTitulo4.AutoSize = true;
             lblTitulo4.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo4.ForeColor = Color.White;
@@ -291,9 +296,9 @@
             pnlFondo5.Controls.Add(lblAnio5);
             pnlFondo5.Controls.Add(lblTitulo5);
             pnlFondo5.Controls.Add(pcbPoster5);
-            pnlFondo5.Location = new Point(40, 531);
+            pnlFondo5.Location = new Point(40, 553);
             pnlFondo5.Name = "pnlFondo5";
-            pnlFondo5.Size = new Size(250, 350);
+            pnlFondo5.Size = new Size(250, 351);
             pnlFondo5.TabIndex = 8;
             // 
             // lblAnio5
@@ -310,6 +315,7 @@
             // 
             // lblTitulo5
             // 
+            lblTitulo5.AutoEllipsis = true;
             lblTitulo5.AutoSize = true;
             lblTitulo5.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo5.ForeColor = Color.White;
@@ -335,9 +341,9 @@
             pnlFondo6.Controls.Add(lblAnio6);
             pnlFondo6.Controls.Add(lblTitulo6);
             pnlFondo6.Controls.Add(pcbPoster6);
-            pnlFondo6.Location = new Point(397, 531);
+            pnlFondo6.Location = new Point(397, 553);
             pnlFondo6.Name = "pnlFondo6";
-            pnlFondo6.Size = new Size(250, 350);
+            pnlFondo6.Size = new Size(250, 351);
             pnlFondo6.TabIndex = 10;
             // 
             // lblAnio6
@@ -354,6 +360,7 @@
             // 
             // lblTitulo6
             // 
+            lblTitulo6.AutoEllipsis = true;
             lblTitulo6.AutoSize = true;
             lblTitulo6.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo6.ForeColor = Color.White;
@@ -379,9 +386,9 @@
             pnlFondo7.Controls.Add(lblAnio7);
             pnlFondo7.Controls.Add(lblTitulo7);
             pnlFondo7.Controls.Add(pcbPoster7);
-            pnlFondo7.Location = new Point(730, 531);
+            pnlFondo7.Location = new Point(730, 553);
             pnlFondo7.Name = "pnlFondo7";
-            pnlFondo7.Size = new Size(250, 350);
+            pnlFondo7.Size = new Size(250, 351);
             pnlFondo7.TabIndex = 12;
             // 
             // lblAnio7
@@ -398,6 +405,7 @@
             // 
             // lblTitulo7
             // 
+            lblTitulo7.AutoEllipsis = true;
             lblTitulo7.AutoSize = true;
             lblTitulo7.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo7.ForeColor = Color.White;
@@ -423,9 +431,9 @@
             pnlFondo8.Controls.Add(lblAnio8);
             pnlFondo8.Controls.Add(lblTitulo8);
             pnlFondo8.Controls.Add(pcbPoster8);
-            pnlFondo8.Location = new Point(1087, 531);
+            pnlFondo8.Location = new Point(1087, 553);
             pnlFondo8.Name = "pnlFondo8";
-            pnlFondo8.Size = new Size(250, 350);
+            pnlFondo8.Size = new Size(250, 351);
             pnlFondo8.TabIndex = 14;
             // 
             // lblAnio8
@@ -442,6 +450,7 @@
             // 
             // lblTitulo8
             // 
+            lblTitulo8.AutoEllipsis = true;
             lblTitulo8.AutoSize = true;
             lblTitulo8.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo8.ForeColor = Color.White;
@@ -490,6 +499,21 @@
             lblHistorial.TabIndex = 16;
             lblHistorial.Text = "Historial de alquileres";
             // 
+            // lblCerrarSesion
+            // 
+            lblCerrarSesion.AutoSize = true;
+            lblCerrarSesion.BackColor = Color.Transparent;
+            lblCerrarSesion.Cursor = Cursors.Hand;
+            lblCerrarSesion.Font = new Font("Consolas", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCerrarSesion.ForeColor = Color.Yellow;
+            lblCerrarSesion.Location = new Point(1175, 38);
+            lblCerrarSesion.Margin = new Padding(4, 0, 4, 0);
+            lblCerrarSesion.Name = "lblCerrarSesion";
+            lblCerrarSesion.Size = new Size(196, 31);
+            lblCerrarSesion.TabIndex = 17;
+            lblCerrarSesion.Text = "Cerrar sesión";
+            lblCerrarSesion.Click += lblCerrarSesion_Click;
+            // 
             // FrmHome_Socio
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -497,7 +521,8 @@
             BackColor = SystemColors.Desktop;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1406, 996);
+            ClientSize = new Size(1406, 997);
+            Controls.Add(lblCerrarSesion);
             Controls.Add(lblHistorial);
             Controls.Add(lblAlquilar);
             Controls.Add(pnlFondo8);
@@ -581,5 +606,6 @@
         private PictureBox pcbPoster3;
         private Label lblAlquilar;
         private Label lblHistorial;
+        private Label lblCerrarSesion;
     }
 }

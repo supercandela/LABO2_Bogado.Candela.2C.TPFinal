@@ -25,5 +25,10 @@ namespace View
             //this.Hide();
             userLogin.ShowDialog();
         }
+
+        private void lblCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

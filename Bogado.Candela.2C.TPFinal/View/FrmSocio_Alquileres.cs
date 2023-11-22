@@ -1,4 +1,3 @@
-using System.Windows.Forms;
 using Entidades;
 using Entidades.Controladores;
 
@@ -19,9 +18,7 @@ namespace View
         private void FrmSocio_Alquileres_Load(object sender, EventArgs e)
         {
             this.lblSinPeliculas.Hide();
-            this.lbxListado.Hide();
             this.dgvListado.Hide();
-            this.lblBienvenido.Text = $"Bienvenid@, {this.user.Nombre}";
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -35,7 +32,8 @@ namespace View
                 }
                 else if (this.rdbArtista.Checked)
                 {
-
+                    this.BuscarPeliculasPorArtista(this.txtBuscador.Text);
+                    this.ActualizarListadoDePeliculas();
                 }
                 else
                 {
@@ -46,9 +44,11 @@ namespace View
             {
                 MessageBox.Show("Debe ingresar un texto para su búsqueda.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
 
-            // con el texto del buscador armar la query según radio button
-
+        private void BuscarPeliculasPorArtista(string texto)
+        {
+            this.listaPelis = Pelicula_Controlador.GetPeliculasPorArtista(texto);
         }
 
         private void BuscarPeliculasPorTitulo(string texto)
@@ -58,7 +58,6 @@ namespace View
 
         private void ActualizarListadoDePeliculas()
         {
-            //lbxListado.DataSource = null;
             this.dgvListado.Rows.Clear();
             if (this.listaPelis is not null && this.listaPelis.Count > 0)
             {
@@ -66,26 +65,45 @@ namespace View
 
                 foreach (Pelicula peli in this.listaPelis)
                 {
-                    this.dgvListado.AutoGenerateColumns = false;
-                    int n = this.dgvListado.Rows.Add(peli.Titulo, peli.Anio.ToString(), peli.Sinopsis);
-                    this.dgvListado.Rows[n].Cells[0].Value = peli.Titulo;
-                    this.dgvListado.Rows[n].Cells[1].Value = peli.Anio.ToString();
-                    this.dgvListado.Rows[n].Cells[2].Value = peli.Sinopsis;
+                    this.dgvListado.Rows.Add(peli.Titulo, peli.Anio.ToString(), peli.Sinopsis, peli.Id);
                 }
 
                 this.dgvListado.Show();
-
-
-                this.dgvListado.DataSource = this.listaPelis;
-                //this.lbxListado.Show();
-                //this.lbxListado.DataSource = this.listaPelis;
             }
             else
             {
-                //this.lbxListado.Hide();
                 this.dgvListado.Hide();
                 this.lblSinPeliculas.Show();
             }
+        }
+
+        private void dgvListado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (int.TryParse(this.dgvListado.SelectedRows[0].Cells["Id"].Value.ToString(), out int idPelicula))
+            {
+                Pelicula peliSeleccionada = new Pelicula();
+                peliSeleccionada = Pelicula_Controlador.GetPeliculaPorId(idPelicula);
+                if (peliSeleccionada is not null)
+                {
+                    FrmPelicula formPelicula = new FrmPelicula(this.user, peliSeleccionada);
+                    //this.Close();
+                    formPelicula.ShowDialog();
+                }
+            }
+        }
+
+        private void lblLimpiar_Click(object sender, EventArgs e)
+        {
+            this.dgvListado.Rows.Clear();
+            this.dgvListado.Hide();
+            this.lblSinPeliculas.Hide();
+        }
+
+        private void lblVolver_Click(object sender, EventArgs e)
+        {
+            FrmHome_Socio formSocio = new FrmHome_Socio(this.user);
+            formSocio.ShowDialog();
+            this.Close();
         }
     }
 }

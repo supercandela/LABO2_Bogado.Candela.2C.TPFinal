@@ -16,5 +16,11 @@ namespace Entidades.Controladores
             return user;
         }
 
+        public static bool AlquilarPelicula(int idUsuario, int idPelicula, string fechaInicio, string fechaFin)
+        {
+            bool alquilerExitoso = Usuario_Repositorio.AlquilarPelicula(idUsuario, idPelicula, fechaInicio, fechaFin);
+            return alquilerExitoso;
+        }
+
     }
 }

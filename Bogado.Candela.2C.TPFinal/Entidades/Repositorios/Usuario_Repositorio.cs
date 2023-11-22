@@ -40,5 +40,44 @@ namespace Entidades.Repositorios
             }
             return user;
         }
+
+        public static bool AlquilarPelicula(int idUsuario, int idPelicula, string fechaInicio, string fechaFin)
+        {
+            bool retorno = false;
+
+            SqlConnection conn = new SqlConnection(GestorSQL.StringConnection);
+
+            try
+            {
+                string query =
+                    "INSERT INTO alquileres (id_usuario, id_pelicula, fecha_inicio, fecha_fin) " +
+                    "VALUES (@0, @1, @2, @3)";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@0", idUsuario);
+                cmd.Parameters.AddWithValue("@1", idPelicula);
+                cmd.Parameters.AddWithValue("@2", fechaInicio);
+                cmd.Parameters.AddWithValue("@3", fechaFin);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.RecordsAffected > 0)
+                {
+                    retorno = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                string mensaje = ex.Message;
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return retorno;
+        }
     }
 }

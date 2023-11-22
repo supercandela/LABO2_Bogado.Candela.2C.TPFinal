@@ -8,7 +8,7 @@ namespace ConsoleTest
         static void Main(string[] args)
         {
 
-            string username = "alejandro";
+            string username = "supercandela";
             string password = "socio1234";
             Usuario user;
             user = Usuario_Controlador.GetUsuarioFromUsername(username, password);

@@ -62,5 +62,10 @@ namespace View
             this.Close();
             alquileres.ShowDialog();
         }
+
+        private void lblCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

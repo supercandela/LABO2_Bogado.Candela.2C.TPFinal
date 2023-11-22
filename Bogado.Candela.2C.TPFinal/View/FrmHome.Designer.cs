@@ -32,6 +32,7 @@
             pictBoxHome = new PictureBox();
             lblBienvenidos = new Label();
             btnIniciarSesion = new Button();
+            lblCerrar = new Label();
             ((System.ComponentModel.ISupportInitialize)pictBoxHome).BeginInit();
             SuspendLayout();
             // 
@@ -75,12 +76,28 @@
             btnIniciarSesion.UseVisualStyleBackColor = false;
             btnIniciarSesion.Click += btnIniciarSesion_Click;
             // 
+            // lblCerrar
+            // 
+            lblCerrar.AutoSize = true;
+            lblCerrar.BackColor = Color.Transparent;
+            lblCerrar.Cursor = Cursors.Hand;
+            lblCerrar.Font = new Font("Consolas", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCerrar.ForeColor = Color.Magenta;
+            lblCerrar.Location = new Point(42, 853);
+            lblCerrar.Margin = new Padding(4, 0, 4, 0);
+            lblCerrar.Name = "lblCerrar";
+            lblCerrar.Size = new Size(318, 42);
+            lblCerrar.TabIndex = 3;
+            lblCerrar.Text = "Cerrar programa";
+            lblCerrar.Click += lblCerrar_Click;
+            // 
             // FrmHome
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(1406, 935);
+            Controls.Add(lblCerrar);
             Controls.Add(btnIniciarSesion);
             Controls.Add(lblBienvenidos);
             Controls.Add(pictBoxHome);
@@ -99,5 +116,6 @@
         private PictureBox pictBoxHome;
         private Label lblBienvenidos;
         private Button btnIniciarSesion;
+        private Label lblCerrar;
     }
 }

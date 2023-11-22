@@ -31,49 +31,54 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSocio_Alquileres));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            lblBienvenido = new Label();
-            lblAlquileres = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            lblBuscador = new Label();
+            lblVolver = new Label();
             grpBuscarPor = new GroupBox();
             rdbArtista = new RadioButton();
             rdbPelicula = new RadioButton();
             txtBuscador = new TextBox();
             btnBuscar = new Button();
             pnlFondo1 = new Panel();
-            lbxListado = new ListBox();
             lblSinPeliculas = new Label();
             dgvListado = new DataGridView();
             Titulo = new DataGridViewTextBoxColumn();
             Anio = new DataGridViewTextBoxColumn();
             Sinopsis = new DataGridViewTextBoxColumn();
+            Id = new DataGridViewTextBoxColumn();
+            lblLimpiar = new Label();
             grpBuscarPor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListado).BeginInit();
             SuspendLayout();
             // 
-            // lblBienvenido
+            // lblBuscador
             // 
-            lblBienvenido.AutoSize = true;
-            lblBienvenido.BackColor = Color.Transparent;
-            lblBienvenido.Font = new Font("Consolas", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            lblBienvenido.ForeColor = Color.DeepSkyBlue;
-            lblBienvenido.Location = new Point(22, 22);
-            lblBienvenido.Margin = new Padding(4, 0, 4, 0);
-            lblBienvenido.Name = "lblBienvenido";
-            lblBienvenido.Size = new Size(240, 47);
-            lblBienvenido.TabIndex = 1;
-            lblBienvenido.Text = "Bienvenid@";
+            lblBuscador.AutoSize = true;
+            lblBuscador.BackColor = Color.Transparent;
+            lblBuscador.Font = new Font("Consolas", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBuscador.ForeColor = Color.DeepSkyBlue;
+            lblBuscador.Location = new Point(22, 22);
+            lblBuscador.Margin = new Padding(4, 0, 4, 0);
+            lblBuscador.Name = "lblBuscador";
+            lblBuscador.Size = new Size(482, 47);
+            lblBuscador.TabIndex = 1;
+            lblBuscador.Text = "Buscador de Películas";
             // 
-            // lblAlquileres
+            // lblVolver
             // 
-            lblAlquileres.AutoSize = true;
-            lblAlquileres.BackColor = Color.Transparent;
-            lblAlquileres.Font = new Font("Consolas", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            lblAlquileres.ForeColor = Color.Red;
-            lblAlquileres.Location = new Point(893, 22);
-            lblAlquileres.Margin = new Padding(4, 0, 4, 0);
-            lblAlquileres.Name = "lblAlquileres";
-            lblAlquileres.Size = new Size(482, 47);
-            lblAlquileres.TabIndex = 4;
-            lblAlquileres.Text = "Buscador de películas";
+            lblVolver.AutoSize = true;
+            lblVolver.BackColor = Color.Transparent;
+            lblVolver.Cursor = Cursors.Hand;
+            lblVolver.Font = new Font("Consolas", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVolver.ForeColor = Color.Red;
+            lblVolver.Location = new Point(1266, 33);
+            lblVolver.Margin = new Padding(4, 0, 4, 0);
+            lblVolver.Name = "lblVolver";
+            lblVolver.Size = new Size(111, 36);
+            lblVolver.TabIndex = 4;
+            lblVolver.Text = "Volver";
+            lblVolver.Click += lblVolver_Click;
             // 
             // grpBuscarPor
             // 
@@ -127,6 +132,7 @@
             btnBuscar.BackColor = Color.LightGray;
             btnBuscar.BackgroundImage = (Image)resources.GetObject("btnBuscar.BackgroundImage");
             btnBuscar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnBuscar.Cursor = Cursors.Hand;
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
             btnBuscar.Location = new Point(1313, 108);
             btnBuscar.Name = "btnBuscar";
@@ -143,20 +149,6 @@
             pnlFondo1.Size = new Size(622, 63);
             pnlFondo1.TabIndex = 8;
             // 
-            // lbxListado
-            // 
-            lbxListado.BackColor = Color.Black;
-            lbxListado.BorderStyle = BorderStyle.None;
-            lbxListado.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbxListado.ForeColor = Color.White;
-            lbxListado.FormattingEnabled = true;
-            lbxListado.ItemHeight = 28;
-            lbxListado.Location = new Point(22, 313);
-            lbxListado.Margin = new Padding(10);
-            lbxListado.Name = "lbxListado";
-            lbxListado.Size = new Size(1353, 672);
-            lbxListado.TabIndex = 9;
-            // 
             // lblSinPeliculas
             // 
             lblSinPeliculas.AutoSize = true;
@@ -172,26 +164,49 @@
             // 
             // dgvListado
             // 
+            dgvListado.AllowUserToAddRows = false;
+            dgvListado.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle1.SelectionForeColor = Color.Red;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(100, 100, 100);
             dgvListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListado.BackgroundColor = SystemColors.Desktop;
             dgvListado.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvListado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvListado.Columns.AddRange(new DataGridViewColumn[] { Titulo, Anio, Sinopsis });
+            dgvListado.Columns.AddRange(new DataGridViewColumn[] { Titulo, Anio, Sinopsis, Id });
+            dgvListado.Cursor = Cursors.Hand;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvListado.DefaultCellStyle = dataGridViewCellStyle3;
             dgvListado.Location = new Point(22, 313);
             dgvListado.Name = "dgvListado";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvListado.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvListado.RowHeadersVisible = false;
             dgvListado.RowHeadersWidth = 62;
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.SelectionForeColor = Color.Red;
-            dgvListado.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvListado.RowTemplate.Height = 33;
             dgvListado.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvListado.Size = new Size(1353, 671);
             dgvListado.TabIndex = 11;
+            dgvListado.CellClick += dgvListado_CellClick;
             // 
             // Titulo
             // 
@@ -214,6 +229,29 @@
             Sinopsis.Name = "Sinopsis";
             Sinopsis.Width = 820;
             // 
+            // Id
+            // 
+            Id.HeaderText = "Id";
+            Id.MinimumWidth = 8;
+            Id.Name = "Id";
+            Id.Visible = false;
+            Id.Width = 150;
+            // 
+            // lblLimpiar
+            // 
+            lblLimpiar.AutoSize = true;
+            lblLimpiar.BackColor = Color.Transparent;
+            lblLimpiar.Cursor = Cursors.Hand;
+            lblLimpiar.Font = new Font("Consolas", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLimpiar.ForeColor = Color.LawnGreen;
+            lblLimpiar.Location = new Point(1137, 193);
+            lblLimpiar.Margin = new Padding(4, 0, 4, 0);
+            lblLimpiar.Name = "lblLimpiar";
+            lblLimpiar.Size = new Size(238, 31);
+            lblLimpiar.TabIndex = 12;
+            lblLimpiar.Text = "Limpiar búsqueda";
+            lblLimpiar.Click += lblLimpiar_Click;
+            // 
             // FrmSocio_Alquileres
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -222,15 +260,15 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1406, 996);
-            Controls.Add(dgvListado);
+            Controls.Add(lblLimpiar);
             Controls.Add(lblSinPeliculas);
-            Controls.Add(lbxListado);
             Controls.Add(btnBuscar);
             Controls.Add(txtBuscador);
             Controls.Add(grpBuscarPor);
-            Controls.Add(lblAlquileres);
-            Controls.Add(lblBienvenido);
+            Controls.Add(lblVolver);
+            Controls.Add(lblBuscador);
             Controls.Add(pnlFondo1);
+            Controls.Add(dgvListado);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmSocio_Alquileres";
@@ -245,19 +283,20 @@
         }
 
         #endregion
-        private Label lblBienvenido;
-        private Label lblAlquileres;
+        private Label lblBuscador;
+        private Label lblVolver;
         private GroupBox grpBuscarPor;
         private RadioButton rdbArtista;
         private RadioButton rdbPelicula;
         private TextBox txtBuscador;
         private Button btnBuscar;
         private Panel pnlFondo1;
-        private ListBox lbxListado;
         private Label lblSinPeliculas;
         private DataGridView dgvListado;
         private DataGridViewTextBoxColumn Titulo;
         private DataGridViewTextBoxColumn Anio;
         private DataGridViewTextBoxColumn Sinopsis;
+        private DataGridViewTextBoxColumn Id;
+        private Label lblLimpiar;
     }
 }

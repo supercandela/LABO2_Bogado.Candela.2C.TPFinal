@@ -28,3 +28,4 @@ C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFin
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.csproj.CopyComplete
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.FrmHome_Socio.resources
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.FrmSocio_Alquileres.resources
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\Bogado.Candela.2C.TPFinal\Bogado.Candela.2C.TPFinal\View\obj\Debug\net6.0-windows\View.FrmPelicula.resources
