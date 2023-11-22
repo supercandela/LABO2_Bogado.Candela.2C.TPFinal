@@ -1,5 +1,5 @@
 using System.Windows.Forms;
-using Entidades;
+using Entidades.Clases;
 using Entidades.Controladores;
 
 namespace View
@@ -65,6 +65,13 @@ namespace View
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void lblHistorial_Click(object sender, EventArgs e)
+        {
+            FrmHistorial_Alquileres formHistorial = new FrmHistorial_Alquileres(this.user);
+            formHistorial.ShowDialog();
             this.Close();
         }
     }

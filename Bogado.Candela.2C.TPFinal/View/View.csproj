@@ -16,6 +16,9 @@
     <Compile Update="FrmPelicula.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmHistorial_Alquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmSocio_Alquileres.cs">
       <SubType>Form</SubType>
     </Compile>

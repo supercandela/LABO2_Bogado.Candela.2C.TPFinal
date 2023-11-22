@@ -1,4 +1,4 @@
-using Entidades;
+using Entidades.Clases;
 using Entidades.Controladores;
 
 namespace View
@@ -86,7 +86,7 @@ namespace View
                 if (peliSeleccionada is not null)
                 {
                     FrmPelicula formPelicula = new FrmPelicula(this.user, peliSeleccionada);
-                    //this.Close();
+                    this.Close();
                     formPelicula.ShowDialog();
                 }
             }

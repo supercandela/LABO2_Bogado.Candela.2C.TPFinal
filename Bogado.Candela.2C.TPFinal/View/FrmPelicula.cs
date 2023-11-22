@@ -1,5 +1,5 @@
 using System.Windows.Forms;
-using Entidades;
+using Entidades.Clases;
 using Entidades.Controladores;
 
 namespace View
@@ -60,6 +60,8 @@ namespace View
 
         private void lblVolver_Click(object sender, EventArgs e)
         {
+            FrmSocio_Alquileres formAlquileres = new FrmSocio_Alquileres(this.user);
+            formAlquileres.ShowDialog();
             this.Close();
         }
 

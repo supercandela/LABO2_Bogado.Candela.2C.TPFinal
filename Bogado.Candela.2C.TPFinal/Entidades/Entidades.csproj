@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Excepciones\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 
 </Project>

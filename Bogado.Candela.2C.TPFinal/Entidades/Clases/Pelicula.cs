@@ -1,6 +1,4 @@
-﻿using Entidades.Clases;
-
-namespace Entidades
+﻿namespace Entidades.Clases
 {
     public class Pelicula
     {

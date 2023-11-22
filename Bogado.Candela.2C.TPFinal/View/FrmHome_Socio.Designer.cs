@@ -124,12 +124,12 @@
             // lblAnio1
             // 
             lblAnio1.AutoSize = true;
-            lblAnio1.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnio1.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnio1.ForeColor = Color.White;
-            lblAnio1.Location = new Point(87, 306);
+            lblAnio1.Location = new Point(94, 317);
             lblAnio1.Margin = new Padding(4, 0, 4, 0);
             lblAnio1.Name = "lblAnio1";
-            lblAnio1.Size = new Size(64, 28);
+            lblAnio1.Size = new Size(54, 23);
             lblAnio1.TabIndex = 7;
             lblAnio1.Text = "Anio";
             // 
@@ -137,12 +137,13 @@
             // 
             lblTitulo1.AutoEllipsis = true;
             lblTitulo1.AutoSize = true;
-            lblTitulo1.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo1.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo1.ForeColor = Color.White;
             lblTitulo1.Location = new Point(12, 267);
             lblTitulo1.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo1.MaximumSize = new Size(226, 50);
             lblTitulo1.Name = "lblTitulo1";
-            lblTitulo1.Size = new Size(90, 28);
+            lblTitulo1.Size = new Size(76, 23);
             lblTitulo1.TabIndex = 6;
             lblTitulo1.Text = "Titulo";
             // 
@@ -169,12 +170,12 @@
             // lblAnio2
             // 
             lblAnio2.AutoSize = true;
-            lblAnio2.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnio2.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnio2.ForeColor = Color.White;
-            lblAnio2.Location = new Point(87, 306);
+            lblAnio2.Location = new Point(94, 317);
             lblAnio2.Margin = new Padding(4, 0, 4, 0);
             lblAnio2.Name = "lblAnio2";
-            lblAnio2.Size = new Size(64, 28);
+            lblAnio2.Size = new Size(54, 23);
             lblAnio2.TabIndex = 7;
             lblAnio2.Text = "Anio";
             // 
@@ -182,12 +183,13 @@
             // 
             lblTitulo2.AutoEllipsis = true;
             lblTitulo2.AutoSize = true;
-            lblTitulo2.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo2.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo2.ForeColor = Color.White;
             lblTitulo2.Location = new Point(12, 267);
             lblTitulo2.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo2.MaximumSize = new Size(226, 50);
             lblTitulo2.Name = "lblTitulo2";
-            lblTitulo2.Size = new Size(90, 28);
+            lblTitulo2.Size = new Size(76, 23);
             lblTitulo2.TabIndex = 6;
             lblTitulo2.Text = "Titulo";
             // 
@@ -214,12 +216,12 @@
             // lblAnio3
             // 
             lblAnio3.AutoSize = true;
-            lblAnio3.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnio3.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnio3.ForeColor = Color.White;
-            lblAnio3.Location = new Point(87, 306);
+            lblAnio3.Location = new Point(94, 317);
             lblAnio3.Margin = new Padding(4, 0, 4, 0);
             lblAnio3.Name = "lblAnio3";
-            lblAnio3.Size = new Size(64, 28);
+            lblAnio3.Size = new Size(54, 23);
             lblAnio3.TabIndex = 7;
             lblAnio3.Text = "Anio";
             // 
@@ -227,12 +229,13 @@
             // 
             lblTitulo3.AutoEllipsis = true;
             lblTitulo3.AutoSize = true;
-            lblTitulo3.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo3.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo3.ForeColor = Color.White;
             lblTitulo3.Location = new Point(12, 267);
             lblTitulo3.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo3.MaximumSize = new Size(226, 50);
             lblTitulo3.Name = "lblTitulo3";
-            lblTitulo3.Size = new Size(90, 28);
+            lblTitulo3.Size = new Size(76, 23);
             lblTitulo3.TabIndex = 6;
             lblTitulo3.Text = "Titulo";
             // 
@@ -259,12 +262,12 @@
             // lblAnio4
             // 
             lblAnio4.AutoSize = true;
-            lblAnio4.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnio4.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnio4.ForeColor = Color.White;
-            lblAnio4.Location = new Point(87, 306);
+            lblAnio4.Location = new Point(94, 317);
             lblAnio4.Margin = new Padding(4, 0, 4, 0);
             lblAnio4.Name = "lblAnio4";
-            lblAnio4.Size = new Size(64, 28);
+            lblAnio4.Size = new Size(54, 23);
             lblAnio4.TabIndex = 7;
             lblAnio4.Text = "Anio";
             // 
@@ -272,12 +275,13 @@
             // 
             lblTitulo4.AutoEllipsis = true;
             lblTitulo4.AutoSize = true;
-            lblTitulo4.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo4.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo4.ForeColor = Color.White;
             lblTitulo4.Location = new Point(12, 267);
             lblTitulo4.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo4.MaximumSize = new Size(226, 50);
             lblTitulo4.Name = "lblTitulo4";
-            lblTitulo4.Size = new Size(90, 28);
+            lblTitulo4.Size = new Size(76, 23);
             lblTitulo4.TabIndex = 6;
             lblTitulo4.Text = "Titulo";
             // 
@@ -304,12 +308,12 @@
             // lblAnio5
             // 
             lblAnio5.AutoSize = true;
-            lblAnio5.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnio5.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnio5.ForeColor = Color.White;
-            lblAnio5.Location = new Point(87, 306);
+            lblAnio5.Location = new Point(94, 317);
             lblAnio5.Margin = new Padding(4, 0, 4, 0);
             lblAnio5.Name = "lblAnio5";
-            lblAnio5.Size = new Size(64, 28);
+            lblAnio5.Size = new Size(54, 23);
             lblAnio5.TabIndex = 7;
             lblAnio5.Text = "Anio";
             // 
@@ -317,12 +321,13 @@
             // 
             lblTitulo5.AutoEllipsis = true;
             lblTitulo5.AutoSize = true;
-            lblTitulo5.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo5.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo5.ForeColor = Color.White;
             lblTitulo5.Location = new Point(12, 267);
             lblTitulo5.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo5.MaximumSize = new Size(226, 50);
             lblTitulo5.Name = "lblTitulo5";
-            lblTitulo5.Size = new Size(90, 28);
+            lblTitulo5.Size = new Size(76, 23);
             lblTitulo5.TabIndex = 6;
             lblTitulo5.Text = "Titulo";
             // 
@@ -349,12 +354,12 @@
             // lblAnio6
             // 
             lblAnio6.AutoSize = true;
-            lblAnio6.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnio6.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnio6.ForeColor = Color.White;
-            lblAnio6.Location = new Point(87, 306);
+            lblAnio6.Location = new Point(94, 317);
             lblAnio6.Margin = new Padding(4, 0, 4, 0);
             lblAnio6.Name = "lblAnio6";
-            lblAnio6.Size = new Size(64, 28);
+            lblAnio6.Size = new Size(54, 23);
             lblAnio6.TabIndex = 7;
             lblAnio6.Text = "Anio";
             // 
@@ -362,12 +367,13 @@
             // 
             lblTitulo6.AutoEllipsis = true;
             lblTitulo6.AutoSize = true;
-            lblTitulo6.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo6.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo6.ForeColor = Color.White;
             lblTitulo6.Location = new Point(12, 267);
             lblTitulo6.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo6.MaximumSize = new Size(226, 50);
             lblTitulo6.Name = "lblTitulo6";
-            lblTitulo6.Size = new Size(90, 28);
+            lblTitulo6.Size = new Size(76, 23);
             lblTitulo6.TabIndex = 6;
             lblTitulo6.Text = "Titulo";
             // 
@@ -394,12 +400,12 @@
             // lblAnio7
             // 
             lblAnio7.AutoSize = true;
-            lblAnio7.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnio7.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnio7.ForeColor = Color.White;
-            lblAnio7.Location = new Point(87, 306);
+            lblAnio7.Location = new Point(94, 317);
             lblAnio7.Margin = new Padding(4, 0, 4, 0);
             lblAnio7.Name = "lblAnio7";
-            lblAnio7.Size = new Size(64, 28);
+            lblAnio7.Size = new Size(54, 23);
             lblAnio7.TabIndex = 7;
             lblAnio7.Text = "Anio";
             // 
@@ -407,12 +413,13 @@
             // 
             lblTitulo7.AutoEllipsis = true;
             lblTitulo7.AutoSize = true;
-            lblTitulo7.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo7.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo7.ForeColor = Color.White;
             lblTitulo7.Location = new Point(12, 267);
             lblTitulo7.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo7.MaximumSize = new Size(226, 50);
             lblTitulo7.Name = "lblTitulo7";
-            lblTitulo7.Size = new Size(90, 28);
+            lblTitulo7.Size = new Size(76, 23);
             lblTitulo7.TabIndex = 6;
             lblTitulo7.Text = "Titulo";
             // 
@@ -439,12 +446,12 @@
             // lblAnio8
             // 
             lblAnio8.AutoSize = true;
-            lblAnio8.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnio8.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblAnio8.ForeColor = Color.White;
-            lblAnio8.Location = new Point(87, 306);
+            lblAnio8.Location = new Point(94, 317);
             lblAnio8.Margin = new Padding(4, 0, 4, 0);
             lblAnio8.Name = "lblAnio8";
-            lblAnio8.Size = new Size(64, 28);
+            lblAnio8.Size = new Size(54, 23);
             lblAnio8.TabIndex = 7;
             lblAnio8.Text = "Anio";
             // 
@@ -452,12 +459,13 @@
             // 
             lblTitulo8.AutoEllipsis = true;
             lblTitulo8.AutoSize = true;
-            lblTitulo8.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo8.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo8.ForeColor = Color.White;
             lblTitulo8.Location = new Point(12, 267);
             lblTitulo8.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo8.MaximumSize = new Size(226, 50);
             lblTitulo8.Name = "lblTitulo8";
-            lblTitulo8.Size = new Size(90, 28);
+            lblTitulo8.Size = new Size(76, 23);
             lblTitulo8.TabIndex = 6;
             lblTitulo8.Text = "Titulo";
             // 
@@ -498,6 +506,7 @@
             lblHistorial.Size = new Size(478, 42);
             lblHistorial.TabIndex = 16;
             lblHistorial.Text = "Historial de alquileres";
+            lblHistorial.Click += lblHistorial_Click;
             // 
             // lblCerrarSesion
             // 

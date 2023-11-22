@@ -1,4 +1,4 @@
-﻿using Entidades;
+﻿using Entidades.Clases;
 using Entidades.Repositorios;
 
 namespace Entidades.Controladores
@@ -20,6 +20,12 @@ namespace Entidades.Controladores
         {
             bool alquilerExitoso = Usuario_Repositorio.AlquilarPelicula(idUsuario, idPelicula, fechaInicio, fechaFin);
             return alquilerExitoso;
+        }
+
+        public static List<Alquiler> GetHistorialDeAlquileres(int idUsuario)
+        {
+            List<Alquiler> listaAlq = Usuario_Repositorio.GetHistorialDeAlquileres(idUsuario);
+            return listaAlq;
         }
 
     }

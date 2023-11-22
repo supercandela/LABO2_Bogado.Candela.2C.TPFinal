@@ -1,4 +1,4 @@
-﻿using Entidades;
+﻿using Entidades.Clases;
 using Entidades.Controladores;
 
 namespace View

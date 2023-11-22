@@ -1,4 +1,4 @@
-﻿namespace Entidades
+﻿namespace Entidades.Clases
 {
     public class Usuario
     {
