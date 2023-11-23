@@ -13,11 +13,6 @@ namespace View
             this.usuario = new Usuario();
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             string username = txtUsuario.Text;

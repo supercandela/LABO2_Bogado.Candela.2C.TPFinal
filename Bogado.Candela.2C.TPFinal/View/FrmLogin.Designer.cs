@@ -160,7 +160,6 @@
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Autenticación de Usuario";
-            Load += FrmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pcbIsologo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbLock).EndInit();
