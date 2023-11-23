@@ -94,8 +94,8 @@ namespace View
         private bool chequearFechas()
         {
             bool fechasOk = false;
-            DateOnly inicio = new DateOnly();
-            DateOnly fin = new DateOnly();
+            DateTime inicio = this.dtpInicio.Value;
+            DateTime fin = this.dtpFin.Value;
 
             if (fin > inicio)
             {
