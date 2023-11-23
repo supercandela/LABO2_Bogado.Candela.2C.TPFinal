@@ -1,4 +1,5 @@
 ﻿using Entidades.Clases;
+using Entidades.Excepciones;
 using System.Data.SqlClient;
 
 namespace Entidades.Repositorios
@@ -33,7 +34,7 @@ namespace Entidades.Repositorios
             }
             catch (Exception ex)
             {
-                throw;
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
             }
             return listaPeliculas;
         }
@@ -64,7 +65,7 @@ namespace Entidades.Repositorios
             }
             catch (Exception ex)
             {
-                throw;
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
             }
 
             return pelicula;
@@ -99,7 +100,7 @@ namespace Entidades.Repositorios
             }
             catch (Exception ex)
             {
-                throw;
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
             }
             return listaPeliculas;
         }
@@ -155,7 +156,7 @@ namespace Entidades.Repositorios
             }
             catch (Exception ex)
             {
-                throw;
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
             }
             return listaPeliculas;
         }

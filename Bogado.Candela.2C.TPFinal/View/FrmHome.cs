@@ -9,26 +9,17 @@ namespace View
             InitializeComponent();
         }
 
-        private void FrmHome_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictBoxHome_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             FrmLogin userLogin = new FrmLogin();
-            //this.Hide();
-            userLogin.ShowDialog();
+            userLogin.Show();
+            this.Close();
         }
 
         private void lblCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
     }
 }

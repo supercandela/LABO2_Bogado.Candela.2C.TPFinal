@@ -1,4 +1,5 @@
 ﻿using Entidades.Clases;
+using Entidades.Excepciones;
 using Entidades.Repositorios;
 
 namespace Entidades.Controladores
@@ -7,26 +8,54 @@ namespace Entidades.Controladores
     {
        public static List<Pelicula> GetPeliculasForHome()
         {
-            List<Pelicula> listaPelis = Pelicula_Repositorio.GetPeliculasForHome();
-            return listaPelis;
+            try
+            {
+                List<Pelicula> listaPelis = Pelicula_Repositorio.GetPeliculasForHome();
+                return listaPelis;
+            }
+            catch (Exception ex)
+            {
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
+            }
         }
 
         public static Pelicula GetPeliculaPorId(int id)
         {
-            Pelicula pelicula = Pelicula_Repositorio.GetPeliculaPorId(id);
-            return pelicula;
+            try
+            {
+                Pelicula pelicula = Pelicula_Repositorio.GetPeliculaPorId(id);
+                return pelicula;
+            }
+            catch (Exception ex)
+            {
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
+            }
         }
 
         public static List<Pelicula> GetPeliculasPorTitulo(string texto)
         {
-            List<Pelicula> listaPelis = Pelicula_Repositorio.GetPeliculasPorTitulo(texto);
-            return listaPelis;
+            try
+            {
+                List<Pelicula> listaPelis = Pelicula_Repositorio.GetPeliculasPorTitulo(texto);
+                return listaPelis;
+            }
+            catch (Exception ex)
+            {
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
+            }
         }
 
         public static List<Pelicula> GetPeliculasPorArtista(string texto)
         {
-            List<Pelicula> listaPelis = Pelicula_Repositorio.GetPeliculasPorArtista(texto);
-            return listaPelis;
+            try
+            {
+                List<Pelicula> listaPelis = Pelicula_Repositorio.GetPeliculasPorArtista(texto);
+                return listaPelis;
+            }
+            catch (Exception ex)
+            {
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
+            }
         }
     }
 }

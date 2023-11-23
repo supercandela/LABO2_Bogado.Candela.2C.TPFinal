@@ -59,19 +59,21 @@ namespace View
         private void lblAlquilar_Click(object sender, EventArgs e)
         {
             FrmSocio_Alquileres alquileres = new FrmSocio_Alquileres(this.user);
+            alquileres.Show();
             this.Close();
-            alquileres.ShowDialog();
         }
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
+            FrmHome frmHome = new FrmHome();
+            frmHome.Show();
             this.Close();
         }
 
         private void lblHistorial_Click(object sender, EventArgs e)
         {
             FrmHistorial_Alquileres formHistorial = new FrmHistorial_Alquileres(this.user);
-            formHistorial.ShowDialog();
+            formHistorial.Show();
             this.Close();
         }
     }

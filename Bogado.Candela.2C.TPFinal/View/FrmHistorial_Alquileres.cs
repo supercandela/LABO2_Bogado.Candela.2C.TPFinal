@@ -17,12 +17,14 @@ namespace View
 
         private Usuario user;
         private List<Alquiler> listaAlq;
+        private Usuario_Controlador usuarioControlador;
 
         public FrmHistorial_Alquileres(Usuario user)
         {
             InitializeComponent();
             this.user = user;
             this.listaAlq = new List<Alquiler>();
+            this.usuarioControlador = new Usuario_Controlador();
         }
 
         private void FrmHistorial_Alquileres_Load(object sender, EventArgs e)
@@ -55,7 +57,15 @@ namespace View
 
         private void GetListadoDeAlquileres()
         {
-            this.listaAlq = Usuario_Controlador.GetHistorialDeAlquileres(this.user.Id);
+            try
+            {
+                this.listaAlq = this.usuarioControlador.GetHistorialDeAlquileres(this.user.Id);
+                this.listaAlq = this.listaAlq.OrdenarPorFechaReciente();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void lblGuardar_Click(object sender, EventArgs e)
@@ -92,7 +102,7 @@ namespace View
         private void lblVolver_Click(object sender, EventArgs e)
         {
             FrmHome_Socio formSocio = new FrmHome_Socio(this.user);
-            formSocio.ShowDialog();
+            formSocio.Show();
             this.Close();
         }
     }

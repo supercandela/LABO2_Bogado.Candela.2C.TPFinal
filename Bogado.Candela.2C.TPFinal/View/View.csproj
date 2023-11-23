@@ -16,6 +16,9 @@
     <Compile Update="FrmAdmin_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmEnConstruccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmHome_Admin.cs" />
     <Compile Update="FrmPelicula.cs">
       <SubType>Form</SubType>

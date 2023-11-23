@@ -1,5 +1,7 @@
 ﻿using System.Data.SqlClient;
 using Entidades.Clases;
+using Entidades.Excepciones;
+using Microsoft.VisualBasic;
 
 namespace Entidades.Repositorios
 {
@@ -30,7 +32,7 @@ namespace Entidades.Repositorios
             }
             catch (Exception ex)
             {
-                string mensaje = ex.Message;
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
             }
             finally
             {
@@ -68,7 +70,7 @@ namespace Entidades.Repositorios
             }
             catch (Exception ex)
             {
-                string mensaje = ex.Message;
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
             }
             finally
             {
@@ -117,7 +119,7 @@ namespace Entidades.Repositorios
             }
             catch (Exception ex)
             {
-                string mensaje = ex.Message;
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
             }
             finally
             {
@@ -128,6 +130,178 @@ namespace Entidades.Repositorios
             }
 
             return listaAlq;
+        }
+
+        internal static bool CrearUsuarioNuevo(string username, string password, string nombre, string apellido, bool isAdmin)
+        {
+            bool usuarioCreado = false;
+
+            SqlConnection conn = new SqlConnection(GestorSQL.StringConnection);
+
+            try
+            {
+                string query =
+                    "IF NOT EXISTS" +
+                    "(SELECT username FROM usuarios WHERE username LIKE @0) " +
+                    "BEGIN " +
+                    "INSERT INTO usuarios " +
+                    "(username, password, nombre, apellido, is_admin) " +
+                    "VALUES(@1, @2, @3, @4, @5) " +
+                    "END";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@0", "%" + username + "%");
+                cmd.Parameters.AddWithValue("@1", username);
+                cmd.Parameters.AddWithValue("@2", password);
+                cmd.Parameters.AddWithValue("@3", nombre);
+                cmd.Parameters.AddWithValue("@4", apellido);
+                cmd.Parameters.AddWithValue("@5", isAdmin);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.RecordsAffected > 0)
+                {
+                    usuarioCreado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return usuarioCreado;
+        }
+
+        internal static Usuario BuscarUsuarioPorUsername(string username)
+        {
+            Usuario user = new Usuario();
+            SqlConnection conn = new SqlConnection(GestorSQL.StringConnection);
+
+            try
+            {
+                string query = $"SELECT * from usuarios WHERE username LIKE @0";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@0", "%" + username + "%");
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    user.Id = reader.GetInt32(0);
+                    user.Username = reader.GetString(1);
+                    user.Password = reader.GetString(2);
+                    user.Nombre = reader.GetString(3);
+                    user.Apellido = reader.GetString(4);
+                    user.IsAdmin = reader.GetBoolean(5);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return user;
+        }
+
+        internal static bool ActualizarDatosUsuario(int id, string username, string password, string nombre, string apellido, bool isAdmin)
+        {
+            bool usuarioActualizado = false;
+
+            SqlConnection conn = new SqlConnection(GestorSQL.StringConnection);
+
+            try
+            {
+                string query =
+                    "UPDATE usuarios SET " +
+                    "username = @0, " +
+                    "password = @1, " +
+                    "nombre = @2, " +
+                    "apellido = @3 ," +
+                    "is_admin = @4 " +
+                    "WHERE id = @5";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@0", username);
+                cmd.Parameters.AddWithValue("@1", password);
+                cmd.Parameters.AddWithValue("@2", nombre);
+                cmd.Parameters.AddWithValue("@3", apellido);
+                cmd.Parameters.AddWithValue("@4", isAdmin);
+                cmd.Parameters.AddWithValue("@5", id);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.RecordsAffected > 0)
+                {
+                    usuarioActualizado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return usuarioActualizado;
+        }
+
+        internal static bool EliminarUsuario(int id)
+        {
+            bool usuarioEliminado = false;
+
+            SqlConnection conn = new SqlConnection(GestorSQL.StringConnection);
+
+            try
+            {
+                string query =
+                    "DELETE FROM usuarios WHERE id = @0";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@0", id);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.RecordsAffected > 0)
+                {
+                    usuarioEliminado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ConexionDBException("Error al conectar a la base de datos.", ex);
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return usuarioEliminado;
         }
     }
 }

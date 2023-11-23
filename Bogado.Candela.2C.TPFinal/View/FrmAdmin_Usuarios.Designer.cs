@@ -258,6 +258,7 @@
             btnEliminarUsuario.TabIndex = 30;
             btnEliminarUsuario.Text = "Eliminar usuario";
             btnEliminarUsuario.UseVisualStyleBackColor = false;
+            btnEliminarUsuario.Click += btnEliminarUsuario_Click;
             // 
             // lblLimpiar
             // 
@@ -286,6 +287,7 @@
             btnBuscar.Size = new Size(54, 55);
             btnBuscar.TabIndex = 33;
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // txtBuscador
             // 
@@ -426,40 +428,6 @@
 
         #endregion
         private Label lblBienvenido;
-        private PictureBox pcbPoster1;
-        private Label lblTopPeliculas;
-        private Panel pnlFondo1;
-        private Label lblAnio1;
-        private Label lblTitulo1;
-        private Panel pnlFondo5;
-        private Label lblAnio5;
-        private Label lblTitulo5;
-        private PictureBox pcbPoster5;
-        private Panel pnlFondo6;
-        private Label lblAnio6;
-        private Label lblTitulo6;
-        private PictureBox pcbPoster6;
-        private Panel pnlFondo2;
-        private Label lblAnio2;
-        private Label lblTitulo2;
-        private PictureBox pcbPoster2;
-        private Panel pnlFondo8;
-        private Label lblAnio8;
-        private Label lblTitulo8;
-        private PictureBox pcbPoster8;
-        private Panel pnlFondo7;
-        private Label lblAnio7;
-        private Label lblTitulo7;
-        private PictureBox pcbPoster7;
-        private Panel pnlFondo4;
-        private Label lblAnio4;
-        private Label lblTitulo4;
-        private PictureBox pcbPoster4;
-        private Panel pnlFondo3;
-        private Label lblAnio3;
-        private Label lblTitulo3;
-        private PictureBox pcbPoster3;
-        private Label lblAlquilar;
         private Label lblCrear;
         private Label lblVolver;
         private Label lblUsuarios;

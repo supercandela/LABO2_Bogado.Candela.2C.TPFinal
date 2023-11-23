@@ -6,11 +6,13 @@ namespace View
     public partial class FrmLogin : Form
     {
         private Usuario usuario;
+        private Usuario_Controlador usuarioControlador;
 
         public FrmLogin()
         {
             InitializeComponent();
             this.usuario = new Usuario();
+            this.usuarioControlador = new Usuario_Controlador();
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -30,20 +32,21 @@ namespace View
             }
             else if (username is not null && password is not null)
             {
-                this.usuario = Usuario_Controlador.GetUsuarioFromUsername(username, password);
+                this.usuario = this.usuarioControlador.GetUsuarioFromUsername(username, password);
 
                 if (username == this.usuario.Username && password == this.usuario.Password)
                 {
                     if (this.usuario.IsAdmin)
                     {
-                        //Crear nuevo FORM Admin
-
+                        FrmHome_Admin homeAdmin = new FrmHome_Admin(this.usuario);
+                        homeAdmin.Show();
+                        this.Close();
                     }
                     else
                     {
                         FrmHome_Socio homeSocio = new FrmHome_Socio(this.usuario);
+                        homeSocio.Show();
                         this.Close();
-                        homeSocio.ShowDialog();
                     }
                 }
                 else
@@ -55,6 +58,8 @@ namespace View
 
         private void lblCancel_Click(object sender, EventArgs e)
         {
+            FrmHome frmHome = new FrmHome();
+            frmHome.Show();
             this.Close();
         }
     }

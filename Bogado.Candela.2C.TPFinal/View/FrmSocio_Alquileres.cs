@@ -1,5 +1,6 @@
 using Entidades.Clases;
 using Entidades.Controladores;
+using Entidades.Excepciones;
 
 namespace View
 {
@@ -79,16 +80,22 @@ namespace View
 
         private void dgvListado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (int.TryParse(this.dgvListado.SelectedRows[0].Cells["Id"].Value.ToString(), out int idPelicula))
+            try
             {
+                int idPelicula = (int)this.dgvListado.SelectedRows[0].Cells["Id"].Value;
+
                 Pelicula peliSeleccionada = new Pelicula();
                 peliSeleccionada = Pelicula_Controlador.GetPeliculaPorId(idPelicula);
                 if (peliSeleccionada is not null)
                 {
                     FrmPelicula formPelicula = new FrmPelicula(this.user, peliSeleccionada);
                     this.Close();
-                    formPelicula.ShowDialog();
+                    formPelicula.Show();
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new DataGridClickException("Error al capturar la película elegida.", ex);
             }
         }
 
@@ -102,7 +109,7 @@ namespace View
         private void lblVolver_Click(object sender, EventArgs e)
         {
             FrmHome_Socio formSocio = new FrmHome_Socio(this.user);
-            formSocio.ShowDialog();
+            formSocio.Show();
             this.Close();
         }
     }

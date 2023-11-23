@@ -1,6 +1,7 @@
 using System.Windows.Forms;
 using Entidades.Clases;
 using Entidades.Controladores;
+using Entidades.Excepciones;
 
 namespace View
 {
@@ -8,12 +9,14 @@ namespace View
     {
         private Usuario user;
         private Pelicula pelicula;
+        private Usuario_Controlador usuarioControlador;
 
         public FrmPelicula(Usuario user, Pelicula pelicula)
         {
             InitializeComponent();
             this.user = user;
             this.pelicula = pelicula;
+            this.usuarioControlador = new Usuario_Controlador();
         }
 
         private void FrmPelicula_Load(object sender, EventArgs e)
@@ -61,7 +64,7 @@ namespace View
         private void lblVolver_Click(object sender, EventArgs e)
         {
             FrmSocio_Alquileres formAlquileres = new FrmSocio_Alquileres(this.user);
-            formAlquileres.ShowDialog();
+            formAlquileres.Show();
             this.Close();
         }
 
@@ -84,18 +87,50 @@ namespace View
             this.lblAlquilar.Show();
         }
 
+        /// <summary>
+        /// Chequea las fechas del alquiler, de manera que el fin sea posterior al inicio.
+        /// </summary>
+        /// <returns>Bool</returns>
+        private bool chequearFechas()
+        {
+            bool fechasOk = false;
+            DateOnly inicio = new DateOnly();
+            DateOnly fin = new DateOnly();
+
+            if (fin > inicio)
+            {
+                fechasOk = true;
+            }
+
+            return fechasOk;
+        }
+
         private void lblConfirmar_Click(object sender, EventArgs e)
         {
-            if (Usuario_Controlador.AlquilarPelicula(this.user.Id, this.pelicula.Id, this.dtpInicio.Value.ToString("MM/dd/yyyy"), this.dtpFin.Value.ToString("MM/dd/yyyy")))
+            if (this.chequearFechas())
             {
-                MessageBox.Show("¡Que disfrutes tu película!", "Alquiler exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FrmHome_Socio formSocio = new FrmHome_Socio(this.user);
-                formSocio.ShowDialog();
-                this.Close();
+                try
+                {
+                    if (this.usuarioControlador.AlquilarPelicula(this.user.Id, this.pelicula.Id, this.dtpInicio.Value.ToString("MM/dd/yyyy"), this.dtpFin.Value.ToString("MM/dd/yyyy")))
+                    {
+                        MessageBox.Show("¡Que disfrutes tu película!", "Alquiler exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmHome_Socio formSocio = new FrmHome_Socio(this.user);
+                        formSocio.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al procesar el alquiler. Vuelve a intentarlo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             else
             {
-                MessageBox.Show("Hubo un error al procesar el alquiler. Vuelve a intentarlo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Las fecha de fin del alquiler es anterior a la fecha de inicio. Revisá los valores.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

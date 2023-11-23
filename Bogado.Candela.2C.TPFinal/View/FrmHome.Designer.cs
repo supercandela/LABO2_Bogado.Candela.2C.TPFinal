@@ -46,7 +46,6 @@
             pictBoxHome.SizeMode = PictureBoxSizeMode.CenterImage;
             pictBoxHome.TabIndex = 0;
             pictBoxHome.TabStop = false;
-            pictBoxHome.Click += pictBoxHome_Click;
             // 
             // lblBienvenidos
             // 
